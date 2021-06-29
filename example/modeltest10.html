@@ -10,16 +10,16 @@
 </head>
 <body>
 <div id="app">
-    <h2>동의에 체크하면 송신 버튼이 활성화 되는 예제</h2>
-    <label><input type="checkbox" v-model="myAgree">동의합니다</label>
-    <button v-bind:disabled="myAgree==false">송신</button>
+    <h2>다 쓰고 나서 입력하는 예제</h2>
+    <input v-model.lazy="myText">
+    <p>입력 후 표시「{{myText}}」</p>
 </div>
 <script>
 
     new Vue({
         el: "#app",
         data: {
-            myAgree: false,
+            myText:'',
         }
     })
 </script>

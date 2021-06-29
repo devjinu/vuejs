@@ -10,16 +10,17 @@
 </head>
 <body>
 <div id="app">
-    <h2>동의에 체크하면 송신 버튼이 활성화 되는 예제</h2>
-    <label><input type="checkbox" v-model="myAgree">동의합니다</label>
-    <button v-bind:disabled="myAgree==false">송신</button>
+    <h2>입력 후 자동으로 수식으로 변경되는 예제</h2>
+    <input v-model.number="myNumber" type="number">
+    <p> 100을 더해서 표시「{{100 + myNumber}}」</p>
+
 </div>
 <script>
 
     new Vue({
         el: "#app",
         data: {
-            myAgree: false,
+            myNumber:0,
         }
     })
 </script>

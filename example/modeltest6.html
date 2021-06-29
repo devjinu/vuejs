@@ -10,16 +10,18 @@
 </head>
 <body>
 <div id="app">
-    <h2>동의에 체크하면 송신 버튼이 활성화 되는 예제</h2>
-    <label><input type="checkbox" v-model="myAgree">동의합니다</label>
-    <button v-bind:disabled="myAgree==false">송신</button>
+    <h2>선택한 라디오 버튼을 표시하는 예제</h2>
+     <label><input type="radio" value="red" v-model="picked">적</label> <br>
+    <label><input type="radio" value="green" v-model="picked">녹</label> <br>
+    <label><input type="radio" value="blue" v-model="picked">청</label> <br>
+    {{picked}} 이 선택됨 <p>
 </div>
 <script>
 
     new Vue({
         el: "#app",
         data: {
-            myAgree: false,
+            picked: 'red',
         }
     })
 </script>

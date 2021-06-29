@@ -10,16 +10,23 @@
 </head>
 <body>
 <div id="app">
-    <h2>동의에 체크하면 송신 버튼이 활성화 되는 예제</h2>
-    <label><input type="checkbox" v-model="myAgree">동의합니다</label>
-    <button v-bind:disabled="myAgree==false">송신</button>
+    <h2>문자열이 선택한 색으로 변하는 예제</h2>
+   <select v-model="myColor">
+       <option disabled value="">색을 선택해 주세요</option>
+       <option>red</option>
+       <option>green</option>
+       <option>blue</option>
+       <option>orange</option>
+       <option>brown</option>
+   </select>
+    <p v-bind:style="{color:myColor}">선택한 색상은 {{ myColor }} 입니다 </p>
 </div>
 <script>
 
     new Vue({
         el: "#app",
         data: {
-            myAgree: false,
+            myColor: '',
         }
     })
 </script>
