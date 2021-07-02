@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js sample</title>
+    <link rel="stylesheet" href="../practice/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+   <h2> 배열 데이터를 리스트로 표시하는 예제</h2>
+    <ul>
+        <li v-for="item in myArray">{{item}}</li>
+    </ul>
+
+
+</div>
+<script>
+
+    new Vue({
+        el: "#app",
+        data: {
+           myArray : ['빵', '과자', '케이크']
+        },
+
+    })
+</script>
+</body>
+</html>
