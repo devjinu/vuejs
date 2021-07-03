@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js sample</title>
+    <link rel="stylesheet" href="../../practice/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <h2> 배열 데이터를 번호가 붙어있는 리스트로 표시하는 예제 </h2>
+    <ul>
+        <li v-for="(item, index) in myArray">{{index}}:{{item}}</li>
+    </ul>
+</div>
+<script>
+
+    new Vue({
+        el: "#app",
+        data:{
+            myArray:['짬뽕','짜장면','볶음밥','탕수육'],
+        }
+    })
+</script>
+</body>
+</html>
