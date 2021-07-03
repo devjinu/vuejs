@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <h2>동의에 체크하면 송신 버튼이 활성화 되는 예제</h2>
+    <label><input type="checkbox" v-model="myAgree">동의합니다</label>
+    <button v-bind:disabled="myAgree==false">송신</button>
+</div>
+<script>
+
+    new Vue({
+        el: "#app",
+        data: {
+            myAgree: false,
+        }
+    })
+</script>
+
+</body>
+</html>

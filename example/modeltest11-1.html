@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <h2>입력 후 자동으로 수식으로 변경되는 예제</h2>
+    <input v-model="myNumber" type="number">
+    <p> 100을 더해서 표시「{{100 + myNumber}}」</p>
+
+</div>
+<script>
+
+    new Vue({
+        el: "#app",
+        data: {
+            myNumber:0,
+        }
+    })
+</script>
+
+</body>
+</html>

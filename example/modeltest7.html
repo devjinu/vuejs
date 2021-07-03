@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <h2>이미지 출력을 라디오버튼으로 변경하는 예제</h2>
+    <label><input type="radio" value="face1.png" v-model="fileName">face1</label> <br>
+    <label><input type="radio" value="face2.png" v-model="fileName">face2</label> <br>
+    <p> {{fileName}} 선택 </p>
+    <img v-bind:src="fileName" />
+</div>
+<script>
+
+    new Vue({
+        el: "#app",
+        data: {
+            fileName: '',
+        }
+    })
+</script>
+
+</body>
+</html>
