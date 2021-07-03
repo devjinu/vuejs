@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js sample</title>
+    <link rel="stylesheet" href="../practice/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <h2> 클릭하면 지정된 값만큼 증가시키는 예제 </h2>
+    <p>{{count}}</p>
+    <button @click="countUp(3)">3증가</button>
+    <button @click="countUp(10)">10증가</button>
+    <button @click="countUp(100)">100증가</button>
+
+</div>
+<script>
+    function good(){
+        alert('좋아~');
+    }
+    new Vue({
+        el: "#app",
+        data: {
+           count:0,
+        },
+        methods:{
+            countUp:function (value){
+                this.count += value;
+            }
+        }
+    })
+</script>
+</body>
+</html>
